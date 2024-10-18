@@ -17,13 +17,13 @@ function Profile() {
         padding: '4rem',
         borderRadius: '8px',
         maxWidth: '40vw', // Make the container responsive
-        marginX: 'auto',
+        marginX: { xs: '6rem', md: '20rem' },
         marginTop: { xs: '2rem', md: '6rem' }, // Adjust top margin for smaller screens
       }}
     >
       {/* Avatar */}
       <Avatar
-        alt="Profile Picture"
+        alt='Profile Picture'
         src={profilePic}
         sx={{
           width: { xs: 200, md: 400 }, // Responsive size for the avatar
@@ -45,14 +45,14 @@ function Profile() {
         }}
       >
         {/* Intro */}
-        <Typography variant="body1" component="div">
+        <Typography variant='body1' component='div'>
           Hello I'm
         </Typography>
 
         {/* Name */}
         <Typography
-          variant="h5"
-          component="div"
+          variant='h5'
+          component='div'
           sx={{
             fontWeight: 'bold',
             mb: 1,
@@ -64,8 +64,8 @@ function Profile() {
 
         {/* Bio */}
         <Typography
-          variant="body1"
-          component="div"
+          variant='body1'
+          component='div'
           sx={{ mb: 2, textAlign: 'center' }}
         >
           I am a passionate software developer with experience in full-stack web
@@ -82,10 +82,10 @@ function Profile() {
         >
           {/* GitHub Icon */}
           <IconButton
-            component="a"
-            href="https://github.com/yotakeshima"
-            target="_blank"
-            rel="noopener noreferrer"
+            component='a'
+            href='https://github.com/yotakeshima'
+            target='_blank'
+            rel='noopener noreferrer'
             sx={{ color: '#333' }}
           >
             <GitHubIcon sx={{ fontSize: { xs: 40, md: 50 } }} />{' '}
@@ -94,10 +94,10 @@ function Profile() {
 
           {/* LinkedIn Icon */}
           <IconButton
-            component="a"
-            href="https://www.linkedin.com/in/yoshinori-takeshima"
-            target="_blank"
-            rel="noopener noreferrer"
+            component='a'
+            href='https://www.linkedin.com/in/yoshinori-takeshima'
+            target='_blank'
+            rel='noopener noreferrer'
             sx={{ color: '#0077b5' }}
           >
             <LinkedInIcon sx={{ fontSize: { xs: 40, md: 50 } }} />{' '}

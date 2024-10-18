@@ -6,15 +6,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-function Navbar() {
+function Navbar({ activeTab, onTabChange }) {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
-    <AppBar position="static">
+    <AppBar
+      position='fixed'
+      sx={{ height: '80px', overflow: 'hidden', top: 0 }}
+    >
       <Toolbar>
         <Box
           sx={{
@@ -28,9 +27,9 @@ function Navbar() {
           }}
         >
           <Typography
-            variant="h4"
-            component="div"
-            className="logo font"
+            variant='h4'
+            component='div'
+            className='logo font'
             sx={{
               marginRight: { xs: 0, md: '30rem' }, // No margin on small screens, add margin on larger screens
               fontSize: { xs: '1.5rem', md: '2rem' }, // Adjust the font size for small screens
@@ -41,10 +40,10 @@ function Navbar() {
             Yoshinori Takeshima
           </Typography>
           <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="inherit"
-            indicatorColor="secondary"
+            value={activeTab}
+            onChange={(_, newValue) => onTabChange(newValue)}
+            textColor='inherit'
+            indicatorColor='secondary'
             centered
             sx={{
               width: { xs: '100%', md: '100%' },
@@ -54,36 +53,36 @@ function Navbar() {
             }}
           >
             <Tab
-              className="font"
+              className='font'
               sx={{
                 fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
                 fontWeight: 'bold',
               }}
-              label="About"
+              label='About'
             />
             <Tab
-              className="font"
+              className='font'
               sx={{
                 fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
                 fontWeight: 'bold',
               }}
-              label="Experience"
+              label='Experience'
             />
             <Tab
-              className="font"
+              className='font'
               sx={{
                 fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
                 fontWeight: 'bold',
               }}
-              label="Projects"
+              label='Projects'
             />
             <Tab
-              className="font"
+              className='font'
               sx={{
                 fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
                 fontWeight: 'bold',
               }}
-              label="Contact"
+              label='Contact'
             />
           </Tabs>
         </Box>
