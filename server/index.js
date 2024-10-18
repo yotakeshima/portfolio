@@ -11,9 +11,9 @@ const user = 'yotakeshima';
 //     Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
 //     'Content-Type': 'application/json',
 //   },
-// };npm i
+// };
 
-app.get('/api/projects', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const githubResponse = await axios.get(
       `https://api.github.com/users/${user}/repos`
@@ -24,7 +24,7 @@ app.get('/api/projects', async (req, res) => {
       description: repo.description,
       url: repo.html_url,
     }));
-    console.log(repos);
+    res.json(repos);
   } catch (err) {
     res.status(500).json({ error: 'Error fetching Github repos' });
   }
