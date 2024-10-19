@@ -7,12 +7,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 function Navbar({ activeTab, onTabChange }) {
-  const [value, setValue] = useState(0);
-
   return (
     <AppBar
-      position='fixed'
-      sx={{ height: '80px', overflow: 'hidden', top: 0 }}
+      position="fixed"
+      sx={{ height: { xs: '50px', md: '90px' }, overflow: 'hidden', top: 0 }}
     >
       <Toolbar>
         <Box
@@ -23,68 +21,82 @@ function Navbar({ activeTab, onTabChange }) {
             justifyContent: { xs: 'center', md: 'center' }, // Center on both small and large screens
             alignItems: 'center', // Align vertically in the center
             marginX: 'auto',
-            padding: { xs: '1rem', md: '2rem' }, // Padding adjusted for screen size
+            padding: { xs: 0, md: '2rem' }, // Padding adjusted for screen size
           }}
         >
           <Typography
-            variant='h4'
-            component='div'
-            className='logo font'
+            variant="h4"
+            component="div"
+            className="logo font"
             sx={{
-              marginRight: { xs: 0, md: '30rem' }, // No margin on small screens, add margin on larger screens
-              fontSize: { xs: '1.5rem', md: '2rem' }, // Adjust the font size for small screens
+              marginTop: { xs: '1rem' },
+              marginX: 'auto', // No margin on small screens, add margin on larger screens
+              fontSize: { xs: '1rem', md: '2rem' }, // Adjust the font size for small screens
               textAlign: 'center', // Center the text for smaller screens
-              mb: { xs: '1rem', md: 0 }, // Add margin on the bottom for smaller screens
+              marginBottom: { xs: -2, md: 0 },
             }}
           >
             Yoshinori Takeshima
           </Typography>
-          <Tabs
-            value={activeTab}
-            onChange={(_, newValue) => onTabChange(newValue)}
-            textColor='inherit'
-            indicatorColor='secondary'
-            centered
+
+          <Box
             sx={{
-              width: { xs: '100%', md: '100%' },
-              '.MuiTabs-indicator': {
-                backgroundColor: 'white',
-              },
+              display: 'flex',
+              justifyContent: 'flex-end',
+              marginRight: '2rem',
+              flexGrow: 1,
             }}
           >
-            <Tab
-              className='font'
-              sx={{
-                fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
-                fontWeight: 'bold',
+            {/* Tabs */}
+            <Tabs
+              value={activeTab >= 0 ? activeTab : false}
+              onChange={(event, newValue) => {
+                console.log(event.target, newValue);
+                onTabChange(newValue);
               }}
-              label='About'
-            />
-            <Tab
-              className='font'
+              textColor="inherit"
+              indicatorColor="secondary"
               sx={{
-                fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
-                fontWeight: 'bold',
+                marginBottom: { xs: '0.6rem' },
+                '.MuiTabs-indicator': {
+                  backgroundColor: activeTab >= 0 ? 'white' : 'transparent',
+                },
               }}
-              label='Experience'
-            />
-            <Tab
-              className='font'
-              sx={{
-                fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
-                fontWeight: 'bold',
-              }}
-              label='Projects'
-            />
-            <Tab
-              className='font'
-              sx={{
-                fontSize: { xs: '0.875rem', md: '1.18rem' }, // Smaller font size for small screens
-                fontWeight: 'bold',
-              }}
-              label='Contact'
-            />
-          </Tabs>
+            >
+              <Tab
+                className="font"
+                sx={{
+                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontWeight: 'bold',
+                }}
+                label="About"
+              />
+              <Tab
+                className="font"
+                sx={{
+                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontWeight: 'bold',
+                }}
+                label="Experience"
+              />
+              <Tab
+                className="font"
+                sx={{
+                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontWeight: 'bold',
+                }}
+                label="Projects"
+              />
+              <Tab
+                className="font"
+                sx={{
+                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontWeight: 'bold',
+                }}
+                label="Contact"
+              />
+            </Tabs>
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>

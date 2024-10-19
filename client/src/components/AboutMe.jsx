@@ -13,14 +13,15 @@ function AboutMe() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: { xs: '1rem', md: '2rem' },
-        maxWidth: '90vw', // Limit the width to 90% of the viewport width
+        maxWidth: '50vw', // Limit the width to 90% of the viewport width
+        minHeight: '30vw',
         margin: 'auto', // Center the About Me box horizontally
-        marginTop: '10rem', // Add spacing between Profile and About Me
+        marginTop: '3rem', // Add spacing between Profile and About Me
       }}
     >
       {/* Avatar (About Me Picture) */}
       <Avatar
-        alt='About Me Picture'
+        alt="About Me Picture"
         src={aboutPic} // Replace with the image path
         sx={{
           width: { xs: 150, md: 250 }, // Responsive avatar size
@@ -44,8 +45,8 @@ function AboutMe() {
       >
         {/* Heading */}
         <Typography
-          variant='h4'
-          component='div'
+          variant="h4"
+          component="div"
           sx={{ fontWeight: 'bold', mb: 1 }}
         >
           About Me
@@ -53,8 +54,8 @@ function AboutMe() {
 
         {/* Biography */}
         <Typography
-          variant='body1'
-          component='div'
+          variant="body1"
+          component="div"
           sx={{
             fontSize: { xs: '1rem', md: '1.25rem' }, // Responsive font size
             mb: 2,

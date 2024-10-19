@@ -34,13 +34,14 @@ function Experience() {
         padding: '2rem',
         maxWidth: '800px',
         marginX: 'auto',
-        marginTop: '20rem',
+        marginTop: '26rem',
+        minHeight: '30vw',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
       }}
     >
       <Typography
-        variant='h4'
-        component='div'
+        variant="h4"
+        component="div"
         sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
       >
         My Experience
