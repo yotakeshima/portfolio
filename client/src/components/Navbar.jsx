@@ -3,13 +3,13 @@ import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import CustomTypography from './StyledTypography';
 import Box from '@mui/material/Box';
 
 function Navbar({ activeTab, onTabChange }) {
   return (
     <AppBar
-      position='fixed'
+      position="fixed"
       sx={{ height: { xs: '50px', md: '90px' }, overflow: 'hidden', top: 0 }}
     >
       <Toolbar>
@@ -24,10 +24,10 @@ function Navbar({ activeTab, onTabChange }) {
             padding: { xs: 0, md: '2rem' }, // Padding adjusted for screen size
           }}
         >
-          <Typography
-            variant='h4'
-            component='div'
-            className='logo font'
+          <CustomTypography
+            variant="h4"
+            component="div"
+            text="Yoshinori Takeshima"
             sx={{
               marginTop: { xs: '1rem' },
               marginX: 'auto', // No margin on small screens, add margin on larger screens
@@ -35,9 +35,7 @@ function Navbar({ activeTab, onTabChange }) {
               textAlign: 'center', // Center the text for smaller screens
               marginBottom: { xs: -2, md: 0 },
             }}
-          >
-            Yoshinori Takeshima
-          </Typography>
+          ></CustomTypography>
 
           <Box
             sx={{
@@ -54,8 +52,8 @@ function Navbar({ activeTab, onTabChange }) {
                 console.log(event.target, newValue);
                 onTabChange(newValue);
               }}
-              textColor='inherit'
-              indicatorColor='secondary'
+              textColor="inherit"
+              indicatorColor="secondary"
               sx={{
                 marginBottom: { xs: '0.6rem' },
                 '.MuiTabs-indicator': {
@@ -64,36 +62,36 @@ function Navbar({ activeTab, onTabChange }) {
               }}
             >
               <Tab
-                className='font'
                 sx={{
-                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontSize: { xs: '0.6rem', md: '1.4rem' }, // Smaller font size for small screens
                   fontWeight: 'bold',
+                  fontFamily: '"Poppins", sans-serif',
                 }}
-                label='About'
+                label="About"
               />
               <Tab
-                className='font'
                 sx={{
-                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontSize: { xs: '0.6rem', md: '1.4rem' }, // Smaller font size for small screens
                   fontWeight: 'bold',
+                  fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Skills'
+                label="Skills"
               />
               <Tab
-                className='font'
                 sx={{
-                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontSize: { xs: '0.6rem', md: '1.4rem' }, // Smaller font size for small screens
                   fontWeight: 'bold',
+                  fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Projects'
+                label="Projects"
               />
               <Tab
-                className='font'
                 sx={{
-                  fontSize: { xs: '0.6rem', md: '1.18rem' }, // Smaller font size for small screens
+                  fontSize: { xs: '0.6rem', md: '1.4rem' }, // Smaller font size for small screens
                   fontWeight: 'bold',
+                  fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Contact'
+                label="Contact"
               />
             </Tabs>
           </Box>
