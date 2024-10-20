@@ -31,8 +31,9 @@ function Skills() {
         variant="h4"
         component="div"
         sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
-        text="My Skills"
-      />
+      >
+        My Skills
+      </CustomTypography>
 
       {/* Grid2 for two columns */}
       <Grid2 container spacing={'15rem'}>

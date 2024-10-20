@@ -6,6 +6,6 @@ const CustomTypography = styled(Typography)(() => ({
   fontFamily: "'Poppins', sans-serif",
 }));
 
-export default function StyledTypography({ text = 'default text', ...props }) {
-  return <CustomTypography {...props}>{text}</CustomTypography>;
+export default function StyledTypography({ children, ...props }) {
+  return <CustomTypography {...props}>{children}</CustomTypography>;
 }

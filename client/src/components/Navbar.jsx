@@ -27,15 +27,17 @@ function Navbar({ activeTab, onTabChange }) {
           <CustomTypography
             variant="h4"
             component="div"
-            text="Yoshinori Takeshima"
             sx={{
+              cursor: 'default',
               marginTop: { xs: '1rem' },
               marginX: 'auto', // No margin on small screens, add margin on larger screens
               fontSize: { xs: '1rem', md: '2rem' }, // Adjust the font size for small screens
               textAlign: 'center', // Center the text for smaller screens
               marginBottom: { xs: -2, md: 0 },
             }}
-          ></CustomTypography>
+          >
+            Yoshinori Takeshima
+          </CustomTypography>
 
           <Box
             sx={{
