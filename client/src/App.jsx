@@ -2,23 +2,23 @@ import { useRef, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
+import Skills from './components/Skills';
 
 function App() {
   const [activeTab, setActiveTab] = useState(-1);
   const profileRef = useRef(null);
   const aboutRef = useRef(null);
-  const experienceRef = useRef(null);
+  const skillRef = useRef(null);
   // const projectsRef = useRef(null);
   // const contactRef = useRef(null);
 
-  const sections = [aboutRef, experienceRef];
+  const sections = [aboutRef, skillRef];
 
   const handleTabChange = (index) => {
     setActiveTab(index);
     sections[index]?.current.scrollIntoView({
       behavior: 'smooth',
-      block: 'start',
+      block: 'center',
     });
   };
 
@@ -69,8 +69,8 @@ function App() {
       <div ref={aboutRef}>
         <AboutMe />
       </div>
-      <div ref={experienceRef}>
-        <Experience />
+      <div ref={skillRef}>
+        <Skills />
       </div>
     </div>
   );
