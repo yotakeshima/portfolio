@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import CustomTypography from './StyledTypography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -27,13 +27,12 @@ function Skills() {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
       }}
     >
-      <Typography
-        variant='h4'
-        component='div'
+      <CustomTypography
+        variant="h4"
+        component="div"
         sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
-      >
-        My Skills
-      </Typography>
+        text="My Skills"
+      />
 
       {/* Grid2 for two columns */}
       <Grid2 container spacing={'15rem'}>
