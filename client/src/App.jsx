@@ -3,16 +3,18 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   const [activeTab, setActiveTab] = useState(-1);
   const profileRef = useRef(null);
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
-  // const projectsRef = useRef(null);
-  // const contactRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const sections = [aboutRef, skillRef];
+  const sections = [aboutRef, skillRef, projectsRef, contactRef];
 
   const handleTabChange = (index) => {
     setActiveTab(index);
@@ -71,6 +73,12 @@ function App() {
       </div>
       <div ref={skillRef}>
         <Skills />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
       </div>
     </div>
   );

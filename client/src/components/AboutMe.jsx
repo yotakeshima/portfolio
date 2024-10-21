@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import CustomTypography from './StyledTypography';
 import Box from '@mui/material/Box';
 import aboutPic from '../assets/profile.jpg'; // Replace with the path to your "About Me" image
 
@@ -14,14 +14,13 @@ function AboutMe() {
         justifyContent: 'center',
         padding: { xs: '1rem', md: '2rem' },
         maxWidth: '50vw', // Limit the width to 90% of the viewport width
-        minHeight: '50vw',
+        minHeight: '40vw',
         margin: 'auto', // Center the About Me box horizontally
-        marginTop: '9rem', // Add spacing between Profile and About Me
       }}
     >
       {/* Avatar (About Me Picture) */}
       <Avatar
-        alt='About Me Picture'
+        alt="About Me Picture"
         src={aboutPic} // Replace with the image path
         sx={{
           width: { xs: 150, md: 250 }, // Responsive avatar size
@@ -44,18 +43,18 @@ function AboutMe() {
         }}
       >
         {/* Heading */}
-        <Typography
-          variant='h4'
-          component='div'
+        <CustomTypography
+          variant="h4"
+          component="div"
           sx={{ fontWeight: 'bold', mb: 1 }}
         >
           About Me
-        </Typography>
+        </CustomTypography>
 
         {/* Biography */}
-        <Typography
-          variant='body1'
-          component='div'
+        <CustomTypography
+          variant="body1"
+          component="div"
           sx={{
             fontSize: { xs: '1rem', md: '1.25rem' }, // Responsive font size
             mb: 2,
@@ -66,7 +65,7 @@ function AboutMe() {
           user-friendly applications. In my spare time, I enjoy learning new
           technologies and exploring the ever-evolving world of software
           development.
-        </Typography>
+        </CustomTypography>
       </Box>
     </Box>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import CustomTypograpy from './StyledTypography';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -17,7 +17,7 @@ function Profile() {
         justifyContent: 'center',
         padding: '4rem',
         borderRadius: '8px',
-        minWidth: '50vw', // Make the container responsive
+        minWidth: '30vw', // Make the container responsive
         margin: { xs: '2rem', md: '25rem' },
         marginTop: { xs: '2rem', md: '10rem' }, // Adjust top margin for smaller screens
       }}
@@ -47,12 +47,12 @@ function Profile() {
         }}
       >
         {/* Intro */}
-        <Typography variant="body1" component="div">
+        <CustomTypograpy variant="body1" component="div">
           Hello I'm
-        </Typography>
+        </CustomTypograpy>
 
         {/* Name */}
-        <Typography
+        <CustomTypograpy
           variant="h5"
           component="div"
           sx={{
@@ -62,23 +62,23 @@ function Profile() {
           }}
         >
           Yoshinori Takeshima
-        </Typography>
+        </CustomTypograpy>
 
         {/* Bio */}
-        <Typography
+        <CustomTypograpy
           variant="body1"
           component="div"
           sx={{ mb: 2, textAlign: 'center' }}
         >
           I am a passionate software developer with experience in full-stack web
           development. I love creating efficient and user-friendly applications.
-        </Typography>
+        </CustomTypograpy>
 
         {/* Social Icons for GitHub and LinkedIn */}
         <Box
           sx={{
             display: 'flex',
-            gap: 2,
+            gap: 4,
             justifyContent: { xs: 'center', md: 'flex-start' },
           }}
         >
@@ -90,7 +90,7 @@ function Profile() {
             rel="noopener noreferrer"
             sx={{ color: '#333' }}
           >
-            <GitHubIcon sx={{ fontSize: { xs: 40, md: 50 } }} />{' '}
+            <GitHubIcon sx={{ fontSize: { xs: 40, md: 70 } }} />{' '}
             {/* Responsive icon size */}
           </IconButton>
 
@@ -102,7 +102,7 @@ function Profile() {
             rel="noopener noreferrer"
             sx={{ color: '#0077b5' }}
           >
-            <LinkedInIcon sx={{ fontSize: { xs: 40, md: 50 } }} />{' '}
+            <LinkedInIcon sx={{ fontSize: { xs: 40, md: 70 } }} />{' '}
             {/* Responsive icon size */}
           </IconButton>
         </Box>

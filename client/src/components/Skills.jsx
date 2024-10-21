@@ -17,66 +17,80 @@ function Skills() {
   return (
     <Box
       sx={{
-        backgroundColor: '#f5f5f5',
-        borderRadius: '8px',
-        padding: '2rem',
-        maxWidth: '800px',
-        marginX: 'auto',
-        marginTop: '20rem',
-        minHeight: '20vw',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+        display: 'flex',
+        flexDirection: 'row', // Stack vertically on small screens, row on larger screens
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: { xs: '1rem', md: '2rem' },
+        maxWidth: '50vw', // Limit the width to 90% of the viewport width
+        minHeight: '40vw',
+        margin: 'auto', // Center the About Me box horizontally
+        marginTop: '9rem',
       }}
     >
-      <CustomTypography
-        variant="h4"
-        component="div"
-        sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
+      <Box
+        sx={{
+          backgroundColor: '#f5f5f5',
+          borderRadius: '8px',
+          padding: '2rem',
+          maxWidth: '800px',
+          minWidth: { xs: '200px', md: '600px' },
+          marginX: 'auto',
+          minHeight: '25rem',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+        }}
       >
-        My Skills
-      </CustomTypography>
+        <CustomTypography
+          variant="h4"
+          component="div"
+          sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
+        >
+          My Skills
+        </CustomTypography>
 
-      {/* Grid2 for two columns */}
-      <Grid2 container spacing={'15rem'}>
-        {/* First Column */}
-        <Grid2 item xs={12} md={6}>
-          <List>
-            {skills.slice(0, midPoint).map((skill, index) => (
-              <ListItem key={index} sx={{ marginBottom: '1rem' }}>
-                <ListItemIcon>
-                  <VerifiedIcon sx={{ color: '#1976d2' }} />
-                </ListItemIcon>
-                <ListItemText
-                  primary={`${skill}`}
-                  primaryTypographyProps={{
-                    fontSize: '1.2rem',
-                    fontWeight: '500',
-                  }}
-                />
-              </ListItem>
-            ))}
-          </List>
-        </Grid2>
+        {/* Grid2 for two columns */}
+        <Grid2 container spacing={{ xs: 0, sm: 5, md: 20 }}>
+          {/* First Column */}
+          <Grid2 item xs={6}>
+            <List>
+              {skills.slice(0, midPoint).map((skill, index) => (
+                <ListItem key={index} sx={{ marginBottom: '1rem' }}>
+                  <ListItemIcon>
+                    <VerifiedIcon sx={{ color: '#1976d2' }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={`${skill}`}
+                    primaryTypographyProps={{
+                      fontSize: { xs: '0.9rem', md: '1.2rem' },
+                      fontWeight: '500',
+                    }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Grid2>
 
-        {/* Second Column */}
-        <Grid2 item xs={12} md={6}>
-          <List>
-            {skills.slice(midPoint).map((skill, index) => (
-              <ListItem key={index} sx={{ marginBottom: '1rem' }}>
-                <ListItemIcon>
-                  <VerifiedIcon sx={{ color: '#1976d2' }} />
-                </ListItemIcon>
-                <ListItemText
-                  primary={`${skill}`}
-                  primaryTypographyProps={{
-                    fontSize: '1.2rem',
-                    fontWeight: '500',
-                  }}
-                />
-              </ListItem>
-            ))}
-          </List>
+          {/* Second Column */}
+          <Grid2 item xs={6}>
+            <List>
+              {skills.slice(midPoint).map((skill, index) => (
+                <ListItem key={index} sx={{ marginBottom: '1rem' }}>
+                  <ListItemIcon>
+                    <VerifiedIcon sx={{ color: '#1976d2' }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={`${skill}`}
+                    primaryTypographyProps={{
+                      fontSize: { xs: '0.9rem', md: '1.2rem' },
+                      fontWeight: '500',
+                    }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Grid2>
         </Grid2>
-      </Grid2>
+      </Box>
     </Box>
   );
 }
