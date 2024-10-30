@@ -16,8 +16,7 @@ function Profile() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '4rem',
-        borderRadius: '8px',
-        minWidth: '30vw', // Make the container responsive
+        minWidth: 'auto', // Make the container responsive
         margin: { xs: '2rem', md: '25rem' },
         marginTop: { xs: '2rem', md: '10rem' }, // Adjust top margin for smaller screens
       }}
@@ -27,10 +26,9 @@ function Profile() {
         alt="Profile Picture"
         src={profilePic}
         sx={{
-          margin: 'auto',
           width: { xs: 200, md: 400 }, // Responsive size for the avatar
           height: { xs: 200, md: 400 },
-          mb: { xs: 2, md: 0 }, // Bottom margin for small screens
+          mb: { xs: 2, md: 0 },
         }}
       />
 
@@ -47,7 +45,11 @@ function Profile() {
         }}
       >
         {/* Intro */}
-        <CustomTypograpy variant="body1" component="div">
+        <CustomTypograpy
+          variant="body1"
+          component="div"
+          sx={{ marginBottom: '-0.5rem' }}
+        >
           Hello I'm
         </CustomTypograpy>
 

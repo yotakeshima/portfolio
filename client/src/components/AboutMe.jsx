@@ -18,35 +18,23 @@ function AboutMe() {
         margin: 'auto', // Center the About Me box horizontally
       }}
     >
-      {/* Avatar (About Me Picture) */}
-      <Avatar
-        alt="About Me Picture"
-        src={aboutPic} // Replace with the image path
-        sx={{
-          width: { xs: 150, md: 250 }, // Responsive avatar size
-          height: { xs: 150, md: 250 }, // Responsive avatar size
-          mb: { xs: '1rem', md: 0 }, // Add bottom margin on small screens
-          objectFit: 'cover',
-        }}
-      />
-
       <Box
         sx={{
           flex: 1,
           minWidth: { xs: '100%', md: '60%' }, // Take full width on small screens, 60% on larger screens
           display: 'flex',
           flexDirection: 'column',
-          alignItems: { xs: 'center', md: 'flex-start' }, // Center text on small screens, left align on larger screens
+          alignItems: 'center', // Center text on small screens, left align on larger screens
           marginLeft: { md: '2rem' }, // Add left margin on larger screens
-          textAlign: { xs: 'center', md: 'left' }, // Center text on small screens, left align on larger screens
+          textAlign: 'center', // Center text on small screens, left align on larger screens
           gap: 2, // Add space between text elements
         }}
       >
         {/* Heading */}
         <CustomTypography
-          variant="h4"
+          variant="h2"
           component="div"
-          sx={{ fontWeight: 'bold', mb: 1 }}
+          sx={{ textAlign: 'left', fontWeight: 'bold', mb: 1 }}
         >
           About Me
         </CustomTypography>
@@ -56,7 +44,7 @@ function AboutMe() {
           variant="body1"
           component="div"
           sx={{
-            fontSize: { xs: '1rem', md: '1.25rem' }, // Responsive font size
+            fontSize: { xs: '1rem', md: '1.4rem' }, // Responsive font size
             mb: 2,
           }}
         >

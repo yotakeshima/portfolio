@@ -25,86 +25,83 @@ function ContactForm() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: { xs: '1rem', md: '3rem' },
-        marginTop: '4rem',
-        backgroundColor: '#f5f5f5',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        maxWidth: '600px',
-        margin: 'auto',
-      }}
-    >
-      <CustomTypography
-        variant="h4"
-        sx={{ marginBottom: '2rem', textAlign: 'center' }}
+    <Box sx={{ display: 'flex', minHeight: '50vw' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: { xs: '2rem', md: '3rem' },
+          marginTop: '4rem',
+          backgroundColor: '#f5f5f5',
+          borderRadius: '8px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          maxWidth: '600px',
+          margin: 'auto',
+          minWidth: { xs: '300px', sm: '600', md: '600px' },
+        }}
       >
-        Contact Me
-      </CustomTypography>
+        <CustomTypography
+          variant="h4"
+          sx={{ fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center' }}
+        >
+          Contact Me
+        </CustomTypography>
 
-      <form onSubmit={handleSubmit}>
-        <Grid2 container spacing={3}>
-          {/* Name Field */}
-          <Grid2 item xs={12}>
-            <TextField
-              fullWidth
-              label="Your Name"
-              variant="outlined"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </Grid2>
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '2rem',
+          }}
+        >
+          <TextField
+            sx={{ width: '300px' }}
+            label="Your Name"
+            variant="outlined"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-          {/* Email Field */}
-          <Grid2 item xs={12}>
-            <TextField
-              fullWidth
-              label="Your Email"
-              variant="outlined"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              type="email"
-            />
-          </Grid2>
+          <TextField
+            sx={{ width: '300px', borderRadius: '40px' }}
+            label="Your Email"
+            variant="outlined"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            type="email"
+          />
 
-          {/* Message Field */}
-          <Grid2 item xs={12}>
-            <TextField
-              fullWidth
-              label="Your Message"
-              variant="outlined"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              multiline
-              rows={4}
-            />
-          </Grid2>
+          <TextField
+            label="Your Message"
+            variant="outlined"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            multiline
+            rows={4}
+            sx={{ width: '400px' }}
+          />
 
-          {/* Submit Button */}
-          <Grid2 item xs={12}>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              fullWidth
-              sx={{ padding: '0.75rem' }}
-            >
-              Send Message
-            </Button>
-          </Grid2>
-        </Grid2>
-      </form>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            sx={{ padding: '0.75rem', display: 'inline-flex' }}
+          >
+            Send Message
+          </Button>
+        </form>
+      </Box>
     </Box>
   );
 }
