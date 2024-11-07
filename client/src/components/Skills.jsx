@@ -51,7 +51,7 @@ function Skills() {
         {/* Grid2 for two columns */}
         <Grid2 container spacing={{ xs: 0, sm: 5, md: 20 }}>
           {/* First Column */}
-          <Grid2 item xs={6}>
+          <Grid2 xs={6}>
             <List>
               {skills.slice(0, midPoint).map((skill, index) => (
                 <ListItem key={index} sx={{ marginBottom: '1rem' }}>
@@ -71,7 +71,7 @@ function Skills() {
           </Grid2>
 
           {/* Second Column */}
-          <Grid2 item xs={6}>
+          <Grid2 xs={6}>
             <List>
               {skills.slice(midPoint).map((skill, index) => (
                 <ListItem key={index} sx={{ marginBottom: '1rem' }}>

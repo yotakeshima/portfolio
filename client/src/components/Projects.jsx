@@ -9,15 +9,16 @@ import {
   CardActions,
 } from '@mui/material';
 import CustomTypography from './StyledTypography';
+import devConnectorPNG from '../assets/devconnector.png';
 
 function Projects() {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'This is a description of Project 1.',
-      image: 'https://via.placeholder.com/300', // Replace with your project image URL
-      githubLink: 'https://github.com/project1',
-      demoLink: 'https://project1-demo.com',
+      title: 'DevConnector',
+      description: 'A social network platform for fellow developer',
+      image: devConnectorPNG, // Replace with your project image URL
+      githubLink: 'https://github.com/yotakeshima/devconnector',
+      demoLink: 'https://devconnector-4ltm.onrender.com/',
     },
     {
       title: 'Project 2',
@@ -54,9 +55,9 @@ function Projects() {
         My Projects
       </CustomTypography>
 
-      <Grid2 container spacing={10}>
+      <Grid2 container spacing={15}>
         {projects.map((project, index) => (
-          <Grid2 item xs={12} sm={6} md={4} key={index}>
+          <Grid2 xs={12} sm={6} md={4} key={index}>
             {' '}
             {/* 3 projects side by side on medium screens */}
             <Card sx={{ maxWidth: 345 }}>

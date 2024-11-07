@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import profilePic from '../assets/profile.jpg';
+import ResumeLink from './ResumeLink';
 
 function Profile() {
   return (
@@ -107,6 +108,7 @@ function Profile() {
             <LinkedInIcon sx={{ fontSize: { xs: 40, md: 70 } }} />{' '}
             {/* Responsive icon size */}
           </IconButton>
+          <ResumeLink />
         </Box>
       </Box>
     </Box>

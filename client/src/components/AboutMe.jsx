@@ -48,8 +48,8 @@ function AboutMe() {
             mb: 2,
           }}
         >
-          I am a passionate software developer with experience in full-stack web
-          development. I specialize in building efficient, scalable, and
+          I am a passionate software developer graduated from George Mason
+          University. I specialize in building efficient, scalable, and
           user-friendly applications. In my spare time, I enjoy learning new
           technologies and exploring the ever-evolving world of software
           development.
