@@ -9,7 +9,18 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import Grid2 from '@mui/material/Grid2';
 
 function Skills() {
-  const skills = ['Java', 'Python', 'JavaScript', 'C', 'PostgreSQL', 'REST'];
+  const skills = [
+    'Java',
+    'Python',
+    'JavaScript',
+    'C',
+    'PostgreSQL',
+    'MongoDB',
+    'REST',
+    'React',
+    'Express.js',
+    'PyTorch',
+  ];
 
   // Calculate the midpoint to split the skills into two columns
   const midPoint = Math.ceil(skills.length / 2);
@@ -41,8 +52,8 @@ function Skills() {
         }}
       >
         <CustomTypography
-          variant="h4"
-          component="div"
+          variant='h4'
+          component='div'
           sx={{ fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}
         >
           My Skills

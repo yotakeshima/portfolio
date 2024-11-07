@@ -32,8 +32,8 @@ function AboutMe() {
       >
         {/* Heading */}
         <CustomTypography
-          variant="h2"
-          component="div"
+          variant='h2'
+          component='div'
           sx={{ textAlign: 'left', fontWeight: 'bold', mb: 1 }}
         >
           About Me
@@ -41,18 +41,19 @@ function AboutMe() {
 
         {/* Biography */}
         <CustomTypography
-          variant="body1"
-          component="div"
+          variant='body1'
+          component='div'
           sx={{
             fontSize: { xs: '1rem', md: '1.4rem' }, // Responsive font size
             mb: 2,
           }}
         >
-          I am a passionate software developer graduated from George Mason
-          University. I specialize in building efficient, scalable, and
-          user-friendly applications. In my spare time, I enjoy learning new
-          technologies and exploring the ever-evolving world of software
-          development.
+          "I hold a Bachelor's degree in Computer Science from George Mason
+          University, with a focus on full-stack development. While my primary
+          expertise lies in building comprehensive web solutions, I have a
+          strong interest in exploring AI/ML models and unlocking their
+          potential. I am committed to continuous learning and expanding my
+          knowledge across the evolving landscape of technology."
         </CustomTypography>
       </Box>
     </Box>

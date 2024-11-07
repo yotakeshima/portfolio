@@ -5,7 +5,8 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 const Footer = () => {
   return (
     <Box
-      component="footer"
+      component='footer'
+      fullwidth
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -14,15 +15,15 @@ const Footer = () => {
         color: '#fff',
         padding: '1rem',
         mt: 'auto',
-        width: 1,
+        width: 'auto',
       }}
     >
       <Typography
-        variant="body2"
-        align="center"
+        variant='body2'
+        align='center'
         sx={{ display: 'flex', alignItems: 'center' }}
       >
-        <CopyrightIcon fontSize="small" sx={{ mr: 0.5 }} />
+        <CopyrightIcon fontSize='small' sx={{ mr: 0.5 }} />
         {new Date().getFullYear()} Yoshinori Takeshima &nbsp; | &nbsp; All
         rights reserved
       </Typography>

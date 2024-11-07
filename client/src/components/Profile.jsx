@@ -24,7 +24,7 @@ function Profile() {
     >
       {/* Avatar */}
       <Avatar
-        alt="Profile Picture"
+        alt='Profile Picture'
         src={profilePic}
         sx={{
           width: { xs: 200, md: 400 }, // Responsive size for the avatar
@@ -47,8 +47,8 @@ function Profile() {
       >
         {/* Intro */}
         <CustomTypograpy
-          variant="body1"
-          component="div"
+          variant='body1'
+          component='div'
           sx={{ marginBottom: '-0.5rem' }}
         >
           Hello I'm
@@ -56,8 +56,8 @@ function Profile() {
 
         {/* Name */}
         <CustomTypograpy
-          variant="h5"
-          component="div"
+          variant='h5'
+          component='div'
           sx={{
             fontWeight: 'bold',
             mb: 1,
@@ -69,12 +69,15 @@ function Profile() {
 
         {/* Bio */}
         <CustomTypograpy
-          variant="body1"
-          component="div"
+          variant='body1'
+          component='div'
           sx={{ mb: 2, textAlign: 'center' }}
         >
-          I am a passionate software developer with experience in full-stack web
-          development. I love creating efficient and user-friendly applications.
+          "As an aspiring software developer with hands-on experience in
+          full-stack web development, I am passionate about creating
+          applications that prioritize and enhance user experience. I thrive on
+          turning ideas into impactful solutions that not only meet user needs
+          but also elevate their digital interactions."
         </CustomTypograpy>
 
         {/* Social Icons for GitHub and LinkedIn */}
@@ -87,10 +90,10 @@ function Profile() {
         >
           {/* GitHub Icon */}
           <IconButton
-            component="a"
-            href="https://github.com/yotakeshima"
-            target="_blank"
-            rel="noopener noreferrer"
+            component='a'
+            href='https://github.com/yotakeshima'
+            target='_blank'
+            rel='noopener noreferrer'
             sx={{ color: '#333' }}
           >
             <GitHubIcon sx={{ fontSize: { xs: 40, md: 70 } }} />{' '}
@@ -99,10 +102,10 @@ function Profile() {
 
           {/* LinkedIn Icon */}
           <IconButton
-            component="a"
-            href="https://www.linkedin.com/in/yoshinori-takeshima"
-            target="_blank"
-            rel="noopener noreferrer"
+            component='a'
+            href='https://www.linkedin.com/in/yoshinori-takeshima'
+            target='_blank'
+            rel='noopener noreferrer'
             sx={{ color: '#0077b5' }}
           >
             <LinkedInIcon sx={{ fontSize: { xs: 40, md: 70 } }} />{' '}
