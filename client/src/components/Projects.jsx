@@ -15,7 +15,7 @@ function Projects() {
   const projects = [
     {
       title: 'DevConnector',
-      description: 'A social network platform for fellow developer',
+      description: 'A social network platform for fellow developers',
       image: devConnectorPNG, // Replace with your project image URL
       githubLink: 'https://github.com/yotakeshima/devconnector',
       demoLink: 'https://devconnector-4ltm.onrender.com/',
@@ -77,6 +77,7 @@ function Projects() {
               </CardContent>
               <CardActions>
                 <Button
+                  variant="contained"
                   size="small"
                   href={project.githubLink}
                   target="_blank"
@@ -85,6 +86,7 @@ function Projects() {
                   GitHub
                 </Button>
                 <Button
+                  variant="contained"
                   size="small"
                   href={project.demoLink}
                   target="_blank"
