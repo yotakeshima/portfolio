@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import CustomTypography from './StyledTypography';
 import devConnectorPNG from '../assets/devconnector.png';
+import customerLoyaltyGIF from '../assets/customer_loyalty.gif';
 
 function Projects() {
   const projects = [
@@ -28,9 +29,9 @@ function Projects() {
       demoLink: 'https://project2-demo.com',
     },
     {
-      title: 'Project 3',
+      title: 'Customer Loyalty App',
       description: 'This is a description of Project 3.',
-      image: 'https://via.placeholder.com/300', // Replace with your project image URL
+      image: customerLoyaltyGIF, // Replace with your project image URL
       githubLink: 'https://github.com/project3',
       demoLink: 'https://project3-demo.com',
     },
@@ -66,6 +67,9 @@ function Projects() {
                 height="300"
                 image={project.image} // Project image
                 alt={project.title}
+                sx={{
+                  objectFit: 'fill',
+                }}
               />
               <CardContent>
                 <CustomTypography gutterBottom variant="h5" component="div">
@@ -85,15 +89,17 @@ function Projects() {
                 >
                   GitHub
                 </Button>
-                <Button
-                  variant="contained"
-                  size="small"
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Demo
-                </Button>
+                {index === 0 && (
+                  <Button
+                    variant="contained"
+                    size="small"
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Link
+                  </Button>
+                )}
               </CardActions>
             </Card>
           </Grid2>
