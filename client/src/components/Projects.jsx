@@ -50,7 +50,7 @@ function Projects() {
       }}
     >
       <CustomTypography
-        variant="h4"
+        variant='h4'
         sx={{ marginBottom: '2rem', textAlign: 'center' }}
       >
         My Projects
@@ -63,39 +63,39 @@ function Projects() {
             {/* 3 projects side by side on medium screens */}
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
-                component="img"
-                height="300"
+                component='img'
+                height='300'
                 image={project.image} // Project image
                 alt={project.title}
                 sx={{
-                  objectFit: 'fill',
+                  objectFit: 'contain',
                 }}
               />
               <CardContent>
-                <CustomTypography gutterBottom variant="h5" component="div">
+                <CustomTypography gutterBottom variant='h5' component='div'>
                   {project.title}
                 </CustomTypography>
-                <CustomTypography variant="body2" color="text.secondary">
+                <CustomTypography variant='body2' color='text.secondary'>
                   {project.description}
                 </CustomTypography>
               </CardContent>
               <CardActions>
                 <Button
-                  variant="contained"
-                  size="small"
+                  variant='contained'
+                  size='small'
                   href={project.githubLink}
-                  target="_blank"
-                  rel="noopener"
+                  target='_blank'
+                  rel='noopener'
                 >
                   GitHub
                 </Button>
                 {index === 0 && (
                   <Button
-                    variant="contained"
-                    size="small"
+                    variant='contained'
+                    size='small'
                     href={project.demoLink}
-                    target="_blank"
-                    rel="noopener"
+                    target='_blank'
+                    rel='noopener'
                   >
                     Link
                   </Button>
