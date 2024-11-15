@@ -15,11 +15,11 @@ function Skills() {
     'JavaScript',
     'C',
     'PostgreSQL',
-    'REST',
     'MongoDB',
+    'REST',
     'React',
+    'Express.js',
     'PyTorch',
-    'Express',
   ];
 
   // Calculate the midpoint to split the skills into two columns

@@ -84,11 +84,11 @@ function Contact() {
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           maxWidth: '600px',
           margin: 'auto',
-          minWidth: { xs: '300px', sm: '600', md: '600px' },
+          minWidth: { xs: '300px', sm: '500px', md: '600px' },
         }}
       >
         <CustomTypography
-          variant="h4"
+          variant='h4'
           sx={{ fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center' }}
         >
           Contact Me
@@ -106,9 +106,9 @@ function Contact() {
         >
           <TextField
             sx={{ width: '300px' }}
-            label="Your Name"
-            variant="outlined"
-            name="name"
+            label='Your Name'
+            variant='outlined'
+            name='name'
             value={formData.name}
             onChange={handleChange}
             required
@@ -116,31 +116,31 @@ function Contact() {
 
           <TextField
             sx={{ width: '300px', borderRadius: '40px' }}
-            label="Your Email"
-            variant="outlined"
-            name="email"
+            label='Your Email'
+            variant='outlined'
+            name='email'
             value={formData.email}
             onChange={handleChange}
             required
-            type="email"
+            type='email'
           />
 
           <TextField
-            label="Your Message"
-            variant="outlined"
-            name="message"
+            label='Your Message'
+            variant='outlined'
+            name='message'
             value={formData.message}
             onChange={handleChange}
             required
             multiline
             rows={4}
-            sx={{ width: '400px' }}
+            sx={{ width: '370px' }}
           />
 
           <Button
-            type="submit"
-            variant="contained"
-            color="primary"
+            type='submit'
+            variant='contained'
+            color='primary'
             sx={{ padding: '0.75rem', display: 'inline-flex' }}
             disabled={isSubmitting}
           >
@@ -149,7 +149,7 @@ function Contact() {
 
           <Fade in={showMessage} timeout={300}>
             <Typography
-              variant="body2"
+              variant='body2'
               color={successMessage ? 'success.main' : 'error.main'}
               sx={{ marginTop: '1rem' }}
             >
