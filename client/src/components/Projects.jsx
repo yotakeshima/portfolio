@@ -25,14 +25,14 @@ function Projects() {
       title: 'Sentiment Analysis Model',
       description: 'This is a description of Project 2.',
       image: 'https://via.placeholder.com/300', // Replace with your project image URL
-      githubLink: 'https://github.com/project2',
+      githubLink: 'https://github.com/yotakeshima/sentiment_analysis',
       demoLink: '',
     },
     {
       title: 'Customer Loyalty App',
       description: 'This is a description of Project 3.',
       image: customerLoyaltyGIF, // Replace with your project image URL
-      githubLink: 'https://github.com/project3',
+      githubLink: 'https://github.com/yotakeshima/customer_loyalty_app',
       demoLink: '',
     },
   ];
