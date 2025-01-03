@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 function Navbar({ activeTab, onTabChange }) {
   return (
     <AppBar
-      position="fixed"
+      position='fixed'
       sx={{ height: { xs: '50px', md: '90px' }, overflow: 'hidden', top: 0 }}
     >
       <Toolbar>
@@ -25,8 +25,8 @@ function Navbar({ activeTab, onTabChange }) {
           }}
         >
           <CustomTypography
-            variant="h4"
-            component="div"
+            variant='h4'
+            component='div'
             sx={{
               cursor: 'default',
               marginTop: { xs: '1rem' },
@@ -42,7 +42,7 @@ function Navbar({ activeTab, onTabChange }) {
           <Box
             sx={{
               display: 'flex',
-              justifyContent: 'flex-end',
+              justifyContent: 'flex',
               marginRight: '2rem',
               flexGrow: 1,
             }}
@@ -54,8 +54,8 @@ function Navbar({ activeTab, onTabChange }) {
                 console.log(event.target, newValue);
                 onTabChange(newValue);
               }}
-              textColor="inherit"
-              indicatorColor="secondary"
+              textColor='inherit'
+              indicatorColor='secondary'
               sx={{
                 marginBottom: { xs: '0.6rem' },
                 '.MuiTabs-indicator': {
@@ -65,11 +65,12 @@ function Navbar({ activeTab, onTabChange }) {
             >
               <Tab
                 sx={{
+                  tabSize: '10px',
                   fontSize: { xs: '0.6rem', md: '1.4rem' }, // Smaller font size for small screens
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label="About"
+                label='About'
               />
               <Tab
                 sx={{
@@ -77,7 +78,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label="Skills"
+                label='Skills'
               />
               <Tab
                 sx={{
@@ -85,7 +86,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label="Projects"
+                label='Projects'
               />
               <Tab
                 sx={{
@@ -93,7 +94,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label="Contact"
+                label='Contact'
               />
             </Tabs>
           </Box>
