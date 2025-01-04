@@ -12,27 +12,33 @@ function Navbar({ activeTab, onTabChange }) {
       position='fixed'
       sx={{ height: { xs: '50px', md: '90px' }, overflow: 'hidden', top: 0 }}
     >
-      <Toolbar>
+      <Toolbar
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: { xs: 'column', md: 'row' },
+          justifyContent: { xs: 'center', md: 'center' },
+        }}
+      >
         <Box
-          sx={{
-            flexGrow: 1,
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' }, // Stack vertically on small screens, horizontal on medium and larger
-            justifyContent: { xs: 'center', md: 'center' }, // Center on both small and large screens
-            alignItems: 'center', // Align vertically in the center
-            marginX: 'auto',
-            padding: { xs: 0, md: '2rem' }, // Padding adjusted for screen size
-          }}
+        // sx={{
+        //   flexGrow: 1,
+        //   display: 'flex',
+        //   flexDirection: { xs: 'column', md: 'row' }, // Stack vertically on small screens, horizontal on medium and larger
+        //   justifyContent: { xs: 'center', md: 'center' }, // Center on both small and large screens
+        //   alignItems: 'center', // Align vertically in the center
+        //   marginX: 'auto',
+        // }}
         >
           <CustomTypography
             variant='h4'
             component='div'
             sx={{
               cursor: 'default',
-              marginTop: { xs: '1rem' },
-              marginX: 'auto', // No margin on small screens, add margin on larger screens
-              fontSize: { xs: '1rem', md: '2rem' }, // Adjust the font size for small screens
-              textAlign: 'center', // Center the text for smaller screens
+              marginTop: '1rem',
+              marginX: 'auto',
+              fontSize: { xs: '1rem', md: '2rem' },
+              textAlign: 'center',
               marginBottom: { xs: -2, md: 0 },
             }}
           >
@@ -57,6 +63,7 @@ function Navbar({ activeTab, onTabChange }) {
               textColor='inherit'
               indicatorColor='secondary'
               sx={{
+                alignSelf: 'center',
                 marginBottom: { xs: '0.6rem' },
                 '.MuiTabs-indicator': {
                   backgroundColor: activeTab >= 0 ? 'white' : 'transparent',
