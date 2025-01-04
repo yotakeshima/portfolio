@@ -11,6 +11,7 @@ import {
 import CustomTypography from './StyledTypography';
 import devConnectorPNG from '../assets/devconnector.png';
 import customerLoyaltyGIF from '../assets/customer_loyalty.gif';
+import sentimentGIF from '../assets/sentimentGIF';
 
 function Projects() {
   const projects = [
@@ -24,7 +25,7 @@ function Projects() {
     {
       title: 'Sentiment Analysis Model',
       description: 'This is a description of Project 2.',
-      image: 'https://via.placeholder.com/300', // Replace with your project image URL
+      image: sentimentGIF, // Replace with your project image URL
       githubLink: 'https://github.com/yotakeshima/sentiment_analysis',
       demoLink: '',
     },
@@ -50,7 +51,7 @@ function Projects() {
       }}
     >
       <CustomTypography
-        variant='h4'
+        variant="h4"
         sx={{ marginBottom: '2rem', textAlign: 'center' }}
       >
         My Projects
@@ -63,8 +64,8 @@ function Projects() {
             {/* 3 projects side by side on medium screens */}
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
-                component='img'
-                height='300'
+                component="img"
+                height="300"
                 image={project.image} // Project image
                 alt={project.title}
                 sx={{
@@ -72,30 +73,30 @@ function Projects() {
                 }}
               />
               <CardContent>
-                <CustomTypography gutterBottom variant='h5' component='div'>
+                <CustomTypography gutterBottom variant="h5" component="div">
                   {project.title}
                 </CustomTypography>
-                <CustomTypography variant='body2' color='text.secondary'>
+                <CustomTypography variant="body2" color="text.secondary">
                   {project.description}
                 </CustomTypography>
               </CardContent>
               <CardActions>
                 <Button
-                  variant='contained'
-                  size='small'
+                  variant="contained"
+                  size="small"
                   href={project.githubLink}
-                  target='_blank'
-                  rel='noopener'
+                  target="_blank"
+                  rel="noopener"
                 >
                   GitHub
                 </Button>
                 {index === 0 && (
                   <Button
-                    variant='contained'
-                    size='small'
+                    variant="contained"
+                    size="small"
                     href={project.demoLink}
-                    target='_blank'
-                    rel='noopener'
+                    target="_blank"
+                    rel="noopener"
                   >
                     Link
                   </Button>
