@@ -24,14 +24,16 @@ function Projects() {
     },
     {
       title: 'Sentiment Analysis Model',
-      description: 'This is a description of Project 2.',
-      image: sentimentGIF, // Replace with your project image URL
+      description:
+        'This project leverages a fine-tuned BERT model to perform sentiment analysis, classifying user-provided sentences as positive or negative with a customizable training pipeline and real-time prediction capability.',
+      image: 'https://via.placeholder.com/300', // Replace with your project image URL
       githubLink: 'https://github.com/yotakeshima/sentiment_analysis',
       demoLink: '',
     },
     {
       title: 'Customer Loyalty App',
-      description: 'This is a description of Project 3.',
+      description:
+        'This project is a customer loyalty app that enables users to track points, redeem rewards, view transaction details, and manage family-based point sharing, powered by an Android front-end, an Express.js server, and a SQL database.',
       image: customerLoyaltyGIF, // Replace with your project image URL
       githubLink: 'https://github.com/yotakeshima/customer_loyalty_app',
       demoLink: '',
@@ -51,7 +53,7 @@ function Projects() {
       }}
     >
       <CustomTypography
-        variant="h4"
+        variant='h4'
         sx={{ marginBottom: '2rem', textAlign: 'center' }}
       >
         My Projects
@@ -64,8 +66,8 @@ function Projects() {
             {/* 3 projects side by side on medium screens */}
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
-                component="img"
-                height="300"
+                component='img'
+                height='300'
                 image={project.image} // Project image
                 alt={project.title}
                 sx={{
@@ -73,30 +75,30 @@ function Projects() {
                 }}
               />
               <CardContent>
-                <CustomTypography gutterBottom variant="h5" component="div">
+                <CustomTypography gutterBottom variant='h5' component='div'>
                   {project.title}
                 </CustomTypography>
-                <CustomTypography variant="body2" color="text.secondary">
+                <CustomTypography variant='body2' color='text.secondary'>
                   {project.description}
                 </CustomTypography>
               </CardContent>
               <CardActions>
                 <Button
-                  variant="contained"
-                  size="small"
+                  variant='contained'
+                  size='small'
                   href={project.githubLink}
-                  target="_blank"
-                  rel="noopener"
+                  target='_blank'
+                  rel='noopener'
                 >
                   GitHub
                 </Button>
                 {index === 0 && (
                   <Button
-                    variant="contained"
-                    size="small"
+                    variant='contained'
+                    size='small'
                     href={project.demoLink}
-                    target="_blank"
-                    rel="noopener"
+                    target='_blank'
+                    rel='noopener'
                   >
                     Link
                   </Button>
