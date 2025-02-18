@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -6,10 +5,11 @@ import Toolbar from '@mui/material/Toolbar';
 import CustomTypography from './StyledTypography';
 import Box from '@mui/material/Box';
 
+// eslint-disable-next-line react/prop-types
 function Navbar({ activeTab, onTabChange }) {
   return (
     <AppBar
-      position='fixed'
+      position="fixed"
       sx={{ height: { xs: '50px', md: '90px' }, overflow: 'hidden', top: 0 }}
     >
       <Toolbar
@@ -31,8 +31,8 @@ function Navbar({ activeTab, onTabChange }) {
         // }}
         >
           <CustomTypography
-            variant='h4'
-            component='div'
+            variant="h4"
+            component="div"
             sx={{
               cursor: 'default',
               marginTop: '1rem',
@@ -60,8 +60,8 @@ function Navbar({ activeTab, onTabChange }) {
                 console.log(event.target, newValue);
                 onTabChange(newValue);
               }}
-              textColor='inherit'
-              indicatorColor='secondary'
+              textColor="inherit"
+              indicatorColor="secondary"
               sx={{
                 alignSelf: 'center',
                 marginBottom: { xs: '0.6rem' },
@@ -77,7 +77,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label='About'
+                label="About"
               />
               <Tab
                 sx={{
@@ -85,7 +85,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Skills'
+                label="Skills"
               />
               <Tab
                 sx={{
@@ -93,7 +93,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Projects'
+                label="Projects"
               />
               <Tab
                 sx={{
@@ -101,7 +101,7 @@ function Navbar({ activeTab, onTabChange }) {
                   fontWeight: 'bold',
                   fontFamily: '"Poppins", sans-serif',
                 }}
-                label='Contact'
+                label="Contact"
               />
             </Tabs>
           </Box>
