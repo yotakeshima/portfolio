@@ -11,7 +11,7 @@ import {
 import CustomTypography from './StyledTypography';
 import devConnectorPNG from '../assets/devconnector.png';
 import customerLoyaltyGIF from '../assets/customer_loyalty.gif';
-import sentimentGIF from '../assets/sentimentGIF.gif';
+import sentimentGIF from '../assets/sentiment_project.gif';
 
 function Projects() {
   const projects = [
