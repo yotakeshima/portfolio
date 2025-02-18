@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@mui/material';
 import CustomTypography from './StyledTypography';
 
@@ -7,7 +6,7 @@ const ResumeLink = () => {
     <Button
       variant="contained"
       color="primary"
-      href="/resume-1.pdf"
+      href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
       sx={{ height: '50px', margin: 'auto' }}
